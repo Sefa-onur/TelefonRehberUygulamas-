@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -115,6 +116,27 @@ public  class BussinesLL
 
 
             return sonuc;   
+        }
+        public int CSVVER()
+        {
+            int sonuc = 0;
+
+            try
+            {
+                List<RehberKayit> kayitlarim = DLL.RehberKayitlariGetir();
+                StreamWriter sw = new StreamWriter(@"c:\TelefonRehberi\DataCSV.csv");
+                CsvHelper.CsvWriter wr = new CsvHelper.CsvWriter(sw);
+                wr.WriteHeader(typeof(RehberKayit));
+
+            }
+            catch (Exception ex)
+            {
+
+                sonuc = 0;
+            }
+
+
+            return sonuc;
         }
     }
 }

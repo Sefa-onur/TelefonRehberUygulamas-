@@ -117,5 +117,18 @@ namespace TRU.UserInterFace
                 MessageBox.Show("Bir Hata Oluştu");
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int sonuc = BLL.CSVVER();
+            if(sonuc > 0)
+            {
+                MessageBox.Show("Data Alma İşlemi Başarılı");
+            }
+            else
+            {
+                MessageBox.Show("Data Alma İşlemi Başarısız");
+            }
+        }
     }
 }

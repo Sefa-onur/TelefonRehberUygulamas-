@@ -31,6 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Liste = new System.Windows.Forms.ListBox();
             this.grpbox_kayit = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -59,7 +60,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grpbox_kayit.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -99,6 +99,16 @@
             this.grpbox_kayit.TabIndex = 1;
             this.grpbox_kayit.TabStop = false;
             this.grpbox_kayit.Text = "Yeni Rehber Kaydı";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(381, 301);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(324, 28);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Kayıt Sil";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -355,6 +365,7 @@
             this.button3.TabIndex = 1;
             this.button3.Text = "CSV VER";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -365,16 +376,6 @@
             this.button2.Text = "XML VER";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(381, 301);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(324, 28);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Kayıt Sil";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // AnaForm
             // 
