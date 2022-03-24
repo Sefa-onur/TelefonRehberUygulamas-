@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using TRU.Core;
 using TRU.Entities;
 
@@ -93,6 +94,27 @@ public  class BussinesLL
         public int KayitSil(Guid ID)
         {
             return DLL.KayitSil(ID);
+        }
+        public int XMLVER()
+        {
+            int sonuc = 0;
+            try
+            {
+                List<RehberKayit> kayitlarim = DLL.RehberKayitlariGetir();
+                XDocument doc = new XDocument(new XDeclaration("1.0","UTF-8","yes"),new XElement("RehberKayitlar",kayitlarim.Select(I => new XElement("Kayıt",
+                    new XElement("ID",I.ID),new XElement("İsim",I.isim),new XElement("Soyisim",I.soyisim),new XElement("TelefonI",I.telefonI), new XElement("TelefonII", I.telefonII),
+                    new XElement("TelefonIII", I.telefonIII),new XElement("EmailAdres",I.emailadres),new XElement("Adres",I.adres)                    
+                ))));
+                doc.Save(@"c:\TelefonRehberi\DATAXML.xml");
+                sonuc = 1;
+            }
+            catch (Exception ex)
+            {
+                sonuc = 0;
+            }
+
+
+            return sonuc;   
         }
     }
 }

@@ -41,7 +41,14 @@ namespace TRU.UserInterFace
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            int sonuc = BLL.XMLVER();
+            if(sonuc > 0)
+            {
+                MessageBox.Show("Data alma işlemi başarılı");
+            }else
+            {
+                MessageBox.Show("Bir hata oluştu");
+            }
         }
         private void Doldur()
         {
