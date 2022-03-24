@@ -111,6 +111,7 @@ namespace TRU.Core
                 Kayitlarim.Remove(silinecekdeger);
                 sonuc = 1;
                 RehberGuncelle();
+
             }
             catch (Exception ex)
             {
