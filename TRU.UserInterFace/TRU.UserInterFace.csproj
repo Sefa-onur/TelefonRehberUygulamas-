@@ -93,6 +93,10 @@
       <Project>{3248b726-ec0d-40ea-a9cf-2a289d29a173}</Project>
       <Name>TRU.BussinesLogicLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TRU.Entities\TRU.Entities.csproj">
+      <Project>{827b793f-e596-4a75-a6c8-90d7628c4d4d}</Project>
+      <Name>TRU.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
