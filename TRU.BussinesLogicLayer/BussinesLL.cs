@@ -119,19 +119,23 @@ public  class BussinesLL
         }
         public int CSVVER()
         {
-            int sonuc = 0;
+            int sonuc = 1;
 
+            return sonuc;
+        }
+
+        public int JSONVER()
+        {
+            int sonuc = 0;
             try
             {
                 List<RehberKayit> kayitlarim = DLL.RehberKayitlariGetir();
-                StreamWriter sw = new StreamWriter(@"c:\TelefonRehberi\DataCSV.csv");
-                CsvHelper.CsvWriter wr = new CsvHelper.CsvWriter(sw);
-                wr.WriteHeader(typeof(RehberKayit));
-
+                string jsonkayitlar =  Newtonsoft.Json.JsonConvert.SerializeObject(kayitlarim);
+                File.WriteAllText(@"c:\TelefonRehberi\JSONDATA.json", jsonkayitlar);
+                sonuc = 1;
             }
             catch (Exception ex)
             {
-
                 sonuc = 0;
             }
 

@@ -130,5 +130,18 @@ namespace TRU.UserInterFace
                 MessageBox.Show("Data Alma İşlemi Başarısız");
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int sonuc = BLL.JSONVER();
+            if (sonuc > 0)
+            {
+                MessageBox.Show("Data Alma İşlemi Başarılı");
+            }
+            else
+            {
+                MessageBox.Show("Data Alma İşlemi Başarısız");
+            }
+        }
     }
 }
